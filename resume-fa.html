@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمدامین بودلانی | رزومه توسعه‌دهنده ارشد اندروید و نرم‌افزار</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent: #2563eb;
+            --accent-soft: #eff6ff;
+            --accent-border: #bfdbfe;
+            --gold: #d97706;
+            --gold-soft: #fffbeb;
+            --gold-border: #fde68a;
+            --emerald: #059669;
+            --emerald-soft: #ecfdf5;
+            --text-dark: #0f172a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --bg-page: #f1f5f9;
+            --bg-card: #ffffff;
+            --sidebar-bg: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 13px;
+            padding: 24px 16px;
+        }
+
+        /* ACTION BAR */
+        .no-print-bar {
+            max-width: 1000px;
+            margin: 0 auto 16px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid var(--border);
+        }
+
+        .btn-action {
+            text-decoration: none;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .btn-lang {
+            background: #f8fafc;
+            color: var(--primary);
+            border-color: var(--border);
+        }
+
+        .btn-lang:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-print {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-print:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
+        }
+
+        /* RESUME SHEET */
+        .resume-sheet {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 32px 36px 24px 36px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .header-identity {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .profile-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2.5px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            background: #1e293b;
+            flex-shrink: 0;
+        }
+
+        .header-title h1 {
+            font-size: 27px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-title .tag-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #93c5fd;
+            margin-top: 4px;
+        }
+
+        .contact-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .contact-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #e2e8f0;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .contact-pill a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-pill:hover {
+            background: rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+        }
+
+        /* 4-KPI STAT CARDS (PSYCHOLOGICAL IMPACT) */
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .kpi-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            backdrop-filter: blur(6px);
+        }
+
+        .kpi-card.gold-glow {
+            background: linear-gradient(135deg, rgba(217, 119, 6, 0.25) 0%, rgba(180, 83, 9, 0.15) 100%);
+            border-color: rgba(251, 191, 36, 0.4);
+        }
+
+        .kpi-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .kpi-val {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .kpi-card.gold-glow .kpi-val {
+            color: #fef08a;
+        }
+
+        .kpi-label {
+            font-size: 11px;
+            color: #cbd5e1;
+            margin-top: 2px;
+        }
+
+        /* 2-COLUMN LAYOUT */
+        .resume-body {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: 800px;
+        }
+
+        /* SIDEBAR (SCAN IN 3 SECONDS) */
+        .sidebar {
+            background: var(--sidebar-bg);
+            border-left: 1px solid var(--border);
+            padding: 24px 20px;
+        }
+
+        .side-section {
+            margin-bottom: 22px;
+        }
+
+        .side-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .side-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .side-title svg {
+            color: var(--accent);
+            width: 16px;
+            height: 16px;
+        }
+
+        /* TAG CLUSTERS */
+        .tag-cluster {
+            margin-bottom: 12px;
+        }
+
+        .cluster-label {
+            font-size: 11.5px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .tag-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tag {
+            background: #ffffff;
+            color: #334155;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            line-height: 1.4;
+        }
+
+        .tag.blue {
+            background: var(--accent-soft);
+            color: #1d4ed8;
+            border-color: var(--accent-border);
+            font-weight: 700;
+        }
+
+        .tag.purple {
+            background: #faf5ff;
+            color: #7e22ce;
+            border-color: #e9d5ff;
+            font-weight: 600;
+        }
+
+        /* HONORS MINI CARDS */
+        .honor-mini {
+            background: #ffffff;
+            border: 1px solid var(--gold-border);
+            border-radius: 8px;
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .honor-mini svg {
+            color: var(--gold);
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .honor-mini-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #92400e;
+            line-height: 1.4;
+        }
+
+        .honor-mini-sub {
+            font-size: 11px;
+            color: #a16207;
+            margin-top: 1px;
+        }
+
+        /* SIDEBAR INFO LIST */
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 12px;
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .info-val {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        /* MAIN CONTENT */
+        .main-stream {
+            padding: 24px 28px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-heading {
+            font-size: 15px;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-heading svg {
+            color: var(--accent);
+            width: 18px;
+            height: 18px;
+        }
+
+        /* SHORT PUNCHY SUMMARY */
+        .summary-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+            border: 1px solid #dbeafe;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.75;
+            color: #1e293b;
+        }
+
+        .summary-card strong {
+            color: var(--accent);
+        }
+
+        /* TIMELINE CARD */
+        .exp-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 20px;
+            position: relative;
+            border-right: 4px solid var(--accent);
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .exp-role {
+            font-size: 14.5px;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .exp-badge {
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-right: 14px;
+            margin-bottom: 5px;
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .bullet-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 15px;
+            position: absolute;
+            right: 0;
+        }
+
+        /* PROJECT CARDS GRID */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .proj-card {
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 16px;
+            background: #ffffff;
+            transition: all 0.2s;
+        }
+
+        .proj-card:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+        }
+
+        .proj-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        .proj-name {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .proj-kpi {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+        }
+
+        .proj-kpi.gold {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .proj-kpi.blue {
+            background: var(--accent-soft);
+            color: var(--accent);
+        }
+
+        .proj-desc {
+            font-size: 12px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .proj-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding-top: 6px;
+            border-top: 1px dashed #f1f5f9;
+        }
+
+        .proj-tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .p-tech {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 10.5px;
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .proj-links {
+            display: flex;
+            gap: 8px;
+        }
+
+        .proj-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .proj-link:hover {
+            text-decoration: underline;
+        }
+
+        /* PRINT STYLES */
+        @media print {
+            @page {
+                size: A4;
+                margin: 8mm 10mm;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+                font-size: 11px;
+                line-height: 1.45;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .no-print-bar {
+                display: none !important;
+            }
+
+            .resume-sheet {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+                border-radius: 0;
+                background: white;
+            }
+
+            .header {
+                padding: 16px 20px 14px 20px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .kpi-row {
+                gap: 8px;
+            }
+
+            .kpi-card {
+                padding: 8px 10px;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .kpi-icon {
+                width: 26px;
+                height: 26px;
+            }
+
+            .kpi-val {
+                font-size: 13.5px;
+            }
+
+            .kpi-label {
+                font-size: 10px;
+            }
+
+            .resume-body {
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 12px 18px !important;
+                background: white !important;
+                gap: 10px !important;
+            }
+
+            .sidebar,
+            .main-stream {
+                display: contents !important;
+                padding: 0 !important;
+                border: none !important;
+                background: transparent !important;
+            }
+
+            .sidebar .side-section {
+                background: #f8fafc;
+                border: 1px solid var(--border);
+                border-radius: 8px;
+                padding: 10px 12px;
+                margin-bottom: 0;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .summary-card {
+                margin-bottom: 0;
+                padding: 10px 14px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .main-section {
+                margin-bottom: 0;
+            }
+
+            .section-header {
+                margin-bottom: 6px;
+                padding-bottom: 4px;
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+
+            .exp-card {
+                margin-bottom: 0;
+                padding: 10px 14px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .projects-grid {
+                gap: 8px;
+            }
+
+            .proj-card {
+                margin-bottom: 0;
+                padding: 10px 12px;
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            /* Order in PDF/Print: Main achievements first, AI/Edu/Skills/Soft at bottom */
+            .sec-status { order: 1; }
+            .sec-honors { order: 2; }
+            .sec-summary { order: 3; }
+            .sec-experience { order: 4; }
+            .sec-projects { order: 5; }
+            .sec-ai { order: 6; }
+            .sec-edu { order: 7; }
+            .sec-skills { order: 8; }
+            .sec-soft { order: 9; }
+            .sec-lang { order: 10; }
+        }
+
+        @media (max-width: 800px) {
+            .resume-sheet {
+                border-radius: 0;
+                border: none;
+            }
+
+            .header {
+                padding: 24px 16px 18px 16px;
+            }
+
+            .header-top {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+
+            .kpi-row {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .resume-body {
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 14px !important;
+                gap: 14px !important;
+                background: #ffffff !important;
+            }
+
+            .sidebar,
+            .main-stream {
+                display: contents !important;
+            }
+
+            .sidebar .side-section {
+                background: #f8fafc;
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                padding: 14px 16px;
+                margin-bottom: 0;
+            }
+
+            .summary-card {
+                margin-bottom: 0;
+            }
+
+            .main-section {
+                margin-bottom: 0;
+            }
+
+            .exp-card {
+                margin-bottom: 0;
+            }
+
+            /* Order in Mobile: Main achievements first, AI/Edu/Skills/Soft at bottom */
+            .sec-status { order: 1; }
+            .sec-honors { order: 2; }
+            .sec-summary { order: 3; }
+            .sec-experience { order: 4; }
+            .sec-projects { order: 5; }
+            .sec-ai { order: 6; }
+            .sec-edu { order: 7; }
+            .sec-skills { order: 8; }
+            .sec-soft { order: 9; }
+            .sec-lang { order: 10; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP ACTION BAR -->
+    <div class="no-print-bar">
+        <div>
+            <strong style="color: #0f172a;">رزومه رسمی | محمدامین بودلانی</strong>
+        </div>
+        <div style="display: flex; gap: 8px;">
+            <a href="resume-en.html" class="btn-action btn-lang">🌐 English Version</a>
+            <button class="btn-action btn-print" onclick="window.print()">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                چاپ / ذخیره PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN SHEET -->
+    <div class="resume-sheet">
+        
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-top">
+                <div class="header-identity">
+                    <img src="1760960239-OOpA.jpg" alt="محمدامین بودلانی" class="profile-avatar">
+                    <div class="header-title">
+                        <h1>
+                            محمدامین بودلانی
+                        </h1>
+                        <div class="tag-title">توسعه‌دهنده ارشد اندروید و نرم‌افزار (Senior Android & Full-Stack Engineer)</div>
+                    </div>
+                </div>
+
+                <div class="contact-pills">
+                    <span class="contact-pill">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        همدان، ایران (۲۰ ساله)
+                    </span>
+                    <a href="tel:+989182225086" class="contact-pill" dir="ltr">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        ۰۹۱۸ ۲۲۲ ۵۰۸۶
+                    </a>
+                    <a href="mailto:amin.boodlani@gmail.com" class="contact-pill">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        amin.boodlani@gmail.com
+                    </a>
+                    <a href="https://github.com/AminBoodlani" target="_blank" class="contact-pill">
+                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        GitHub / AminBoodlani
+                    </a>
+                </div>
+            </div>
+
+            <!-- 4 PSYCHOLOGICAL STAT CARDS -->
+            <div class="kpi-row">
+                <div class="kpi-card gold-glow">
+                    <div class="kpi-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <div>
+                        <div class="kpi-val">+۱,۰۰۰,۰۰۰</div>
+                        <div class="kpi-label">نصب در مارکت‌های رسمی</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card gold-glow">
+                    <div class="kpi-icon">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div>
+                        <div class="kpi-val">رتبه کشوری</div>
+                        <div class="kpi-label">مسابقات اندروید ۱۴۰۳</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <div>
+                        <div class="kpi-val">کارت نخبگان</div>
+                        <div class="kpi-label">بنیاد نخبگان همدان</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <div class="kpi-val">۶+ سال سابقه</div>
+                        <div class="kpi-label">توسعه نرم‌افزار و محصول</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2-COLUMN BODY -->
+        <div class="resume-body">
+            
+            <!-- LEFT/SIDEBAR (FACTS, TECH SKILLS, EDUCATION) -->
+            <aside class="sidebar">
+                
+                <!-- COOPERATION STATUS -->
+                <div class="side-section sec-status">
+                    <div class="side-title">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        وضعیت همکاری
+                    </div>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <span class="info-label">نظام وظیفه:</span>
+                            <span class="info-val" style="color: #047857;">معافیت تحصیلی (دانشجو)</span>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-label">نوع همکاری:</span>
+                            <span class="info-val" style="color: #2563eb;">دورکاری / تمام‌وقت / پروژه</span>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-label">سن / محل:</span>
+                            <span class="info-val">۲۰ سال / همدان</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- HONORS BADGES -->
+                <div class="side-section sec-honors">
+                    <div class="side-title">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        افتخارات و نخبگی
+                    </div>
+                    <div class="honor-mini">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <div class="honor-mini-title">دارنده کارت رسمی نخبگان</div>
+                            <div class="honor-mini-sub">بنیاد ملی نخبگان استان همدان</div>
+                        </div>
+                    </div>
+                    <div class="honor-mini">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <div>
+                            <div class="honor-mini-title">رتبه کشوری مسابقات اندروید</div>
+                            <div class="honor-mini-sub">مسابقات کشوری نرم‌افزار ۱۴۰۳</div>
+                        </div>
+                    </div>
+                    <div class="honor-mini">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <div class="honor-mini-title">رتبه اول استانی مسابقات وب</div>
+                            <div class="honor-mini-sub">مسابقات استانی برنامه‌نویسی وب ۱۴۰۳</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AGENTIC AI & MODERN DEV -->
+                <div class="side-section sec-ai">
+                    <div class="side-title" style="color: #6b21a8;">
+                        <svg fill="none" stroke="#7c3aed" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        هوش مصنوعی ایجنتی و توسعه شتاب‌یافته
+                    </div>
+                    <div style="font-size: 11px; color: #475569; line-height: 1.5; margin-bottom: 6px;">
+                        تسلط بر هدایت ایجنت‌های هوش مصنوعی برای بالا آوردن صفر تا صد پروژه‌ها به‌صورت کاملاً دقیق، استاندارد و با معماری تمیز.
+                    </div>
+                    <div class="tag-pills">
+                        <span class="tag purple">Google Antigravity</span>
+                        <span class="tag purple">Claude 3.7 & GPT Agents</span>
+                        <span class="tag purple">توسعه شتاب‌یافته (Rapid Bootstrapping)</span>
+                        <span class="tag purple">معماری مبتنی بر پرامپتینگ مهندسی‌شده</span>
+                    </div>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="side-section sec-edu">
+                    <div class="side-title">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
+                        تحصیلات دانشگاهی
+                    </div>
+                    <div style="font-size: 12px; font-weight: 700; color: var(--text-dark);">کاردانی کامپیوتر (نرم‌افزار)</div>
+                    <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">دانشگاه ملی مهارت (شهید جباریان همدان)</div>
+                    <div style="font-size: 11px; color: var(--accent); font-weight: 600; margin-top: 2px;">۱۴۰۲ – اکنون (سال دوم)</div>
+                </div>
+
+                <!-- TECH STACK PILLS WITH CLEAR PROFICIENCY TIERS -->
+                <div class="side-section sec-skills">
+                    <div class="side-title">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        مهارت‌های فنی و سطوح تسلط
+                    </div>
+
+                    <!-- TIER 1: CORE SPECIALTIES -->
+                    <div style="font-size: 11px; font-weight: 800; color: #1e40af; margin: 4px 0 6px; display: flex; align-items: center; gap: 4px;">
+                        <span>⭐️ تخصص‌های اصلی و عمیق (Core Expertise)</span>
+                    </div>
+
+                    <div class="tag-cluster">
+                        <div class="cluster-label">📱 اکوسیستم و معماری بومی اندروید:</div>
+                        <div class="tag-pills">
+                            <span class="tag blue">Kotlin (Advanced)</span>
+                            <span class="tag blue">Jetpack Compose</span>
+                            <span class="tag blue">Clean Arch / MVI / MVVM</span>
+                            <span class="tag blue">Coroutines & StateFlow</span>
+                            <span class="tag blue">Room DB & Paging 3</span>
+                            <span class="tag blue">WorkManager & Services</span>
+                            <span class="tag blue">AndroidX Media3 / ExoPlayer</span>
+                            <span class="tag blue">Retrofit & OkHttp</span>
+                            <span class="tag">Java (Classic Native)</span>
+                            <span class="tag">XML & ViewBinding</span>
+                            <span class="tag">Material 3 Theming</span>
+                            <span class="tag">Hilt & KSP</span>
+                            <span class="tag">ProGuard / R8 Obfuscation</span>
+                            <span class="tag">Biometric API & Keystore</span>
+                            <span class="tag">انتشار رسمی در مارکت‌ها (+۱M نصب)</span>
+                        </div>
+                    </div>
+
+                    <div class="tag-cluster">
+                        <div class="cluster-label">⚡ بک‌اند، بات‌ها و سرور (اصلی):</div>
+                        <div class="tag-pills">
+                            <span class="tag blue">PHP (توسعه سبک API)</span>
+                            <span class="tag blue">ربات‌های دانلودر تلگرام و روبیکا (رسمی و سلف)</span>
+                            <span class="tag blue">کانفیگ صفر تا صد VPS برای هاستینگ</span>
+                            <span class="tag blue">راه‌اندازی و مدیریت cPanel & WHM</span>
+                            <span class="tag blue">سرور لینوکس (Ubuntu/Debian)</span>
+                            <span class="tag">وب‌سرورهای Nginx / Apache / SSL</span>
+                        </div>
+                    </div>
+
+                    <!-- TIER 2: SECONDARY & PRACTICAL -->
+                    <div style="font-size: 11px; font-weight: 800; color: #0f766e; margin: 10px 0 6px; display: flex; align-items: center; gap: 4px;">
+                        <span>⚡ مهارت‌های کاربردی و مکمل (Practical & Secondary)</span>
+                    </div>
+
+                    <div class="tag-cluster">
+                        <div class="tag-pills">
+                            <span class="tag">Git & GitHub (GitFlow, PRs)</span>
+                            <span class="tag">MySQL / MariaDB 13</span>
+                            <span class="tag">HTML5 & CSS3</span>
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">Node.js & Socket.IO</span>
+                            <span class="tag">اسکریپت‌نویسی Python (اتوماسیون)</span>
+                            <span class="tag">سخت‌افزار Arduino / ESP32</span>
+                            <span class="tag">پروتکل صنعتی MQTT</span>
+                            <span class="tag">خرید و مدیریت هاست و دامنه</span>
+                        </div>
+                    </div>
+
+                    <!-- TIER 3: AI-AGENT ASSISTED -->
+                    <div style="margin-top: 10px; background: #faf5ff; padding: 8px 10px; border-radius: 8px; border: 1px dashed #d8b4fe;">
+                        <div style="font-size: 11px; font-weight: 800; color: #6b21a8; display: flex; align-items: center; gap: 4px;">
+                            <span>🤖 پیاده‌سازی و لانچ با هوش مصنوعی (AI-Agent Driven)</span>
+                        </div>
+                        <div style="font-size: 10.5px; color: #7e22ce; line-height: 1.5; margin: 3px 0 6px;">
+                            توسعه و بالا آوردن سیستم‌های مدرن وب (مانند پلتفرم آتریون) با هدایت ایجنت‌ها (Google Antigravity, Claude, GPT):
+                        </div>
+                        <div class="tag-pills">
+                            <span class="tag purple">TypeScript 5.x</span>
+                            <span class="tag purple">Vue 3 (Composition API)</span>
+                            <span class="tag purple">Tailwind CSS (v3/v4)</span>
+                            <span class="tag purple">Vite & ابزارهای SPA</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- SOFT SKILLS & COLLABORATION -->
+                <div class="side-section sec-soft">
+                    <div class="side-title">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        مهارت‌های فردی و روحیه تیمی
+                    </div>
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <span class="info-label">یادگیری:</span>
+                            <span class="info-val" style="color: #047857; font-weight: 700;">سرعت یادگیری بسیار بالا (Fast Learner)</span>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-label">روحیه تیمی:</span>
+                            <span class="info-val" style="color: #2563eb; font-weight: 700;">علاقه‌مند به کار تیمی و هم‌افزایی</span>
+                        </li>
+                        <li class="info-item">
+                            <span class="info-label">حل مسئله:</span>
+                            <span class="info-val">دید تحلیلی و چالش‌پذیری بالا</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- LANGUAGES -->
+                <div class="side-section sec-lang">
+                    <div class="side-title">
+                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                        زبان‌ها
+                    </div>
+                    <div style="font-size: 11.5px; display: flex; justify-content: space-between; padding: 2px 0;">
+                        <span>فارسی:</span> <strong style="color: var(--text-dark);">زبان مادری (Native)</strong>
+                    </div>
+                    <div style="font-size: 11.5px; display: flex; justify-content: space-between; padding: 2px 0;">
+                        <span>انگلیسی:</span> <strong style="color: var(--text-dark);">تسلط فنی و تخصصی</strong>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- MAIN CONTENT (EXPERIENCE & HIGH-IMPACT PROJECTS) -->
+            <main class="main-stream">
+                
+                <!-- EXECUTIVE SUMMARY -->
+                <div class="summary-card sec-summary">
+                    مهندس نرم‌افزار و کارآفرین مستقل <strong>(۲۰ ساله)</strong> با <strong>۶ سال تجربه عملی</strong> در ساخت محصولات پرترافیک با بیش از <strong>۱ میلیون کاربر فعال</strong>. دارای <strong>سرعت یادگیری بسیار بالا (Fast Learner)</strong> در درک و پیاده‌سازی سریع فناوری‌های جدید و <strong>علاقه‌مند به کار تیمی، اشتراک دانش و ارتباط موثر در محیط‌های چابک</strong>؛ متخصص ارشد اکوسیستم مدرن اندروید (Jetpack Compose & Kotlin)، توسعه بک‌اند سریع (PHP) و معمار پیاده‌سازی دقیق، استاندارد و شتاب‌یافته پروژه‌ها با ایجنت‌های هوش مصنوعی (Google Antigravity, Claude, GPT). <strong>آماده همکاری دورکاری، تمام‌وقت و پروژه‌ای.</strong>
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="main-section sec-experience">
+                    <div class="section-header">
+                        <div class="section-heading">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            سوابق شغلی و تجربیات حرفه‌ای
+                        </div>
+                    </div>
+
+                    <div class="exp-card">
+                        <div class="exp-header">
+                            <div class="exp-role">توسعه‌دهنده مستقل، موسس استارتاپ و فریلنسر ارشد</div>
+                            <span class="exp-badge">۱۳۹۸ – اکنون (بیش از ۶ سال)</span>
+                        </div>
+                        <ul class="bullet-list">
+                            <li><strong>جذب بیش از ۱,۰۰۰,۰۰۰ کاربر فعال:</strong> طراحی، ساخت و انتشار بیش از ۱۰ محصول نرم‌افزاری در مارکت‌های رسمی با پایداری <strong>Crash-free بالای ۹۹.۸٪</strong>.</li>
+                            <li><strong>سرویس‌های پرترافیک و بهینه:</strong> طراحی و پیاده‌سازی دانلودر آنلاین (<a href="https://dl.rubinopro.ir" target="_blank" style="color:var(--accent);">dl.rubinopro.ir</a>) با پردازش پرسرعت در سطح وب‌سرویس و پاسخ‌دهی پایدار به هزاران کاربر روزانه.</li>
+                            <li><strong>کانفیگ و هاستینگ سرور (DevOps):</strong> تسلط بر راه‌اندازی و کانفیگ صفر تا صد سرورهای VPS لینوکسی (Ubuntu/Debian) برای هاستینگ، نصب و مدیریت محیط‌های cPanel و WHM، تنظیمات DNS، وب‌سرورهای Nginx/Apache و گواهینامه‌های SSL.</li>
+                            <li><strong>توسعه فول‌استک پلتفرم‌ها:</strong> هدایت صفر تا صد نیازمندی‌ها، دیتابیس، APIهای سبک بدون فریم‌ورک و کلاینت‌های بومی اندروید.</li>
+                            <li><strong>یادگیری سریع و تعامل تیمی:</strong> سرعت جذب و یادگیری فوق‌العاده بالا در کار با استک‌ها و ابزارهای جدید، انگیزه و تعهد بالا به کار تیمی، مستندسازی شفاف، تبادل نظر فنی و مشارکت فعال در فرآیندهای توسعه با Git و GitHub.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- KEY PROJECTS (CARDS WITH METRICS & LINKS) -->
+                <div class="main-section sec-projects">
+                    <div class="section-header">
+                        <div class="section-heading">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            پروژه‌های شاخص و منتشرشده
+                        </div>
+                    </div>
+
+                    <div class="projects-grid">
+                    
+                    <!-- PROJ 1: RUBINOPRO ANDROID -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                📱 اپلیکیشن اندروید روبینو پرو (RubinoPro Android Client)
+                            </span>
+                            <span class="proj-kpi gold">+۱,۰۰۰,۰۰۰ نصب مارکت</span>
+                        </div>
+                        <div class="proj-desc">
+                            کلاینت نیتیو اندروید برای دانلود و مدیریت هوشمند رسانه‌های شبکه‌های اجتماعی با بیش از ۱ میلیون کاربر فعال و نرخ Crash-free بالای ۹۹.۸٪؛ مجهز به موتور دانلود چندبخشی و کار در پس‌زمینه با WorkManager و Foreground Service، کشینگ چندسطحی و بهینه‌سازی شده برای پهنای باند و CDN داخلی.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">Kotlin / Java</span>
+                                <span class="p-tech">WorkManager</span>
+                                <span class="p-tech">Foreground Service</span>
+                                <span class="p-tech">Room DB</span>
+                                <span class="p-tech">Coroutines</span>
+                                <span class="p-tech">OkHttp</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://myket.ir/app/RubinoPro.ir" target="_blank" class="proj-link">📱 صفحه مایکت</a>
+                                <a href="https://github.com/AminBoodlani/RubinoPro-AppApi" target="_blank" class="proj-link">💻 گیت‌هاب کلاینت</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 2: RUBINOPRO WEB DOWNLOADER -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                🌐 دانلودر تحت‌وب روبینو پرو (RubinoPro Web Downloader)
+                            </span>
+                            <span class="proj-kpi blue">وب‌سرویس پرسرعت آنلاین</span>
+                        </div>
+                        <div class="proj-desc">
+                            سامانه آنلاین دانلود سریع رسانه بدون نیاز به نصب نرم‌افزار؛ پاسخ‌دهی به هزاران درخواست روزانه همزمان با Latency زیر ۱۰۰ میلی‌ثانیه، ماژول اختصاصی و سبک استخراج و کش لینک‌های مستقیم، سیستم Rate-Limiting و مصرف حداقلی منابع برای پایداری کامل تحت بار ترافیکی بالا.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">PHP</span>
+                                <span class="p-tech">RESTful API</span>
+                                <span class="p-tech">High Concurrency</span>
+                                <span class="p-tech">Direct Caching</span>
+                                <span class="p-tech">Resource-Efficient Arch</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://dl.rubinopro.ir" target="_blank" class="proj-link">🌐 مشاهده dl.rubinopro.ir</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 3: RUBINOPRO DOWNLOADER BOTS & AUTOMATION -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                🤖 ربات‌های دانلودر تلگرام و روبیکا (Telegram & Rubika Downloader Bots)
+                            </span>
+                            <span class="proj-kpi blue">ربات‌های ابزار دانلودر رسانه</span>
+                        </div>
+                        <div class="proj-desc">
+                            توسعه و استقرار ربات‌های ابزار دانلودر رسانه؛ شامل <strong>ربات دانلودر فعال تلگرام روبینو پرو</strong> جهت دریافت لینک و ارسال مستقیم و آنی فایل‌های دانلود شده به کاربر در تلگرام، طراحی <strong>ربات رسمی دانلودر روبیکا</strong> با API رسمی روبیکا، همراه با پیاده‌سازی ربات‌های سلف (Self-Bot) و اتوماسیون اکانت روبیکا برای استخراج و دانلود خودکار مدیا.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">Telegram Bot API</span>
+                                <span class="p-tech">Rubika Official Bot API</span>
+                                <span class="p-tech">Rubika Self-Bot Protocol</span>
+                                <span class="p-tech">Media Downloader Engine</span>
+                                <span class="p-tech">Python / Asyncio</span>
+                            </div>
+                            <div class="proj-links">
+                                <span class="proj-link" style="color: #0284c7;">🤖 ربات دانلودر فعال تلگرام</span>
+                                <span class="proj-link" style="color: #0284c7;">🤖 ربات دانلودر رسمی روبیکا</span>
+                                <span class="proj-link" style="color: #64748b;">⚡ اتوماسیون و سلف‌بات</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 2 -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                🌐 پلتفرم فول‌استک آتریون (Atrium Platform)
+                            </span>
+                            <span class="proj-kpi blue">سیستم جامع نقد تجربیات</span>
+                        </div>
+                        <div class="proj-desc">
+                            پلتفرم مدرک‌محور اعتبارسنجی نظرات کاربران؛ بک‌اند میکرومیکروکرنل PHP فوق‌سریع بدون فریم‌ورک، پنل تک‌صفحه‌ای Vue 3 و اپ اندروید Compose.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">PHP</span>
+                                <span class="p-tech">MariaDB 13</span>
+                                <span class="p-tech">Vue 3 / TS</span>
+                                <span class="p-tech">Jetpack Compose</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://atriun.ir" target="_blank" class="proj-link">🌐 وب‌سایت (atriun.ir)</a>
+                                <a href="https://github.com/AminBoodlani/AtriumWeb" target="_blank" class="proj-link">💻 گیت‌هاب</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 3 -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                📚 اپلیکیشن آموزش زبان (LearnEnglish)
+                            </span>
+                            <span class="proj-kpi blue">کافه‌بازار</span>
+                        </div>
+                        <div class="proj-desc">
+                            اپ تعاملی واژگان با لود نامحدود بدون افت فریم از طریق Room Paging 3، رابط کاربری با انیمیشن‌های وکتور Lottie Compose و معماری Hilt.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">Kotlin</span>
+                                <span class="p-tech">Compose</span>
+                                <span class="p-tech">Room Paging 3</span>
+                                <span class="p-tech">Lottie</span>
+                                <span class="p-tech">Hilt</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://cafebazaar.ir/app/amin.application.learnenglish" target="_blank" class="proj-link">📱 کافه‌بازار</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 4 -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                💰 اپلیکیشن مانی‌فلو (MoneyFlow Finance)
+                            </span>
+                            <span class="proj-kpi blue">کافه‌بازار</span>
+                        </div>
+                        <div class="proj-desc">
+                            مدیریت مالی شخصی مدرن با زبان طراحی Material 3، ویجت‌های تعاملی هوم‌اسکرین با Google Glance، امنیت بیومتریک و Room DB آفلاین.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">Jetpack Compose</span>
+                                <span class="p-tech">Material 3</span>
+                                <span class="p-tech">Room DB</span>
+                                <span class="p-tech">Glance</span>
+                                <span class="p-tech">Hilt</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://cafebazaar.ir/app/amin.app.moneyflow" target="_blank" class="proj-link">📱 کافه‌بازار</a>
+                                <a href="https://github.com/AminBoodlani/MoneyFlow" target="_blank" class="proj-link">💻 گیت‌هاب</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 5 -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                🎬 فشرده‌ساز ویدیو سخت‌افزاری (Video Compressor)
+                            </span>
+                            <span class="proj-kpi blue">Media3 API</span>
+                        </div>
+                        <div class="proj-desc">
+                            پردازش و ترنسکود سخت‌افزاری ویدیو در پس‌زمینه با AndroidX Media3 Transformer گوگل بدون افت کیفیت ملموس و فریز رابط کاربری.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">Media3 Transformer</span>
+                                <span class="p-tech">Coroutines</span>
+                                <span class="p-tech">Hardware Transcoding</span>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://cafebazaar.ir/app/amin.app.videocompressor" target="_blank" class="proj-link">📱 کافه‌بازار</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROJ 6 -->
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <span class="proj-name">
+                                🚗 کنترلر و تله‌متری خودرو (CaR Controller IoT)
+                            </span>
+                            <span class="proj-kpi blue">رباتیک و IoT</span>
+                        </div>
+                        <div class="proj-desc">
+                            کنترل از راه دور و پایش بلادرنگ با پروتکل MQTT روی سرور ابری، سرور وب‌سوکت Node.js و بردهای میکروکنترلر Arduino/ESP32.
+                        </div>
+                        <div class="proj-footer">
+                            <div class="proj-tech-tags">
+                                <span class="p-tech">Node.js</span>
+                                <span class="p-tech">MQTT Protocol</span>
+                                <span class="p-tech">Socket.IO</span>
+                                <span class="p-tech">Arduino/ESP32</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
