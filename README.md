@@ -17,7 +17,14 @@
 
 <br/>
 
-[🇮🇷 برای مشاهده نسخه فارسی اینجا کلیک کنید](#-نسخه-فارسی-persian-version)
+<!-- RESUME QUICK ACTIONS -->
+[![Download PDF Resume](https://img.shields.io/badge/📄%20Download%20Resume-PDF%20Format-DC2626?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./aminboodlani.pdf)
+[![Online HTML Resume](https://img.shields.io/badge/🌐%20Interactive%20Resume-HTML%20Version-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](./index.html)
+[![Persian Resume](https://img.shields.io/badge/🌐%20Persian%20Resume-Farsi%20Version-059669?style=for-the-badge&logo=translate&logoColor=white)](./resume-fa.html)
+
+<br/>
+
+[👉 برای مطالعه متن کامل رزومه به زبان فارسی اینجا کلیک کنید](#-نسخه-فارسی-persian-version)
 
 ---
 
@@ -72,6 +79,19 @@ data class SoftwareEngineer(
 * 🖥️ **Full Server & DevOps Control**: End-to-end setup and administration of production **Linux VPS (Ubuntu/Debian)**, complete **cPanel & WHM** configuration, DNS zone routing, Nginx/Apache reverse proxies, and SSL security.
 * 🤖 **AI-Agent Orchestration**: Pioneer in steering autonomous agent teams (**Google Antigravity, Claude 3.7, GPT Agents**) to scaffold and deploy production-grade software at 5x delivery speed.
 * 🤝 **Collaborative Mindset**: Recognized as a **continuous Fast Learner** with high adaptability to emerging technology stacks, passionate about peer code reviews, transparent documentation, and GitFlow teamwork.
+
+---
+
+## 💼 Professional Experience & Employment History
+
+#### 🚀 Independent Software Founder & Senior Freelance Engineer
+*2018 – Present (6+ Years) • Full-Time & Contract*
+
+* **Scaled Products to 1,000,000+ Active Users**: Architected, developed, and launched 10+ consumer software products across official Android app stores, maintaining a stellar **99.8%+ crash-free session rate**.
+* **Engineered High-Volume Public Services**: Designed and deployed the online media downloader at [dl.rubinopro.ir](https://dl.rubinopro.ir), sustaining thousands of concurrent daily requests with sub-100ms processing latency and custom in-memory caching.
+* **Server & Hosting Infrastructure (DevOps)**: End-to-end bare-metal configuration of production Linux VPS environments (Ubuntu/Debian) for web hosting, complete installation & management of cPanel & WHM, DNS routing, Nginx/Apache reverse proxies, and SSL certificates.
+* **Full-Stack Platform Delivery**: Managed full software development lifecycles from relational database architecture (MySQL/MariaDB) to zero-dependency lightweight PHP APIs and native Android client applications.
+* **Fast Learning & Team Synergy**: Recognized for rapid onboarding and high agility in mastering emerging technologies and frameworks; committed to collaborative engineering, peer code reviews, transparent documentation, and GitFlow workflows.
 
 ---
 
@@ -277,6 +297,22 @@ data class SoftwareEngineer(
 
 ---
 
+## 🎓 Education & Academic Background
+
+* **Associate Degree in Software Engineering (Computer Science)**  
+  **National University of Skills** *(Shahid Jabbarian College, Hamedan)* | 2023 – Present (2nd Year)  
+  *Military Status:* Active Student Educational Exemption (معافیت تحصیلی)
+
+---
+
+## 🏆 Honors, Awards & Official Accreditations
+
+* 🎖 **Official Elite Cardholder** — National Elites Foundation (*بنیاد ملی نخبگان استان همدان*)
+* 🥇 **National Rank Winner** — Nationwide Software & Android Development Contest (1403 / 2024)
+* 🏆 **Provincial 1st Rank Winner** — Provincial Web Applications & Systems Competition (1403 / 2024)
+
+---
+
 ## 📊 GitHub Analytics & Real-Time Stats
 
 <div align="center">
@@ -304,12 +340,35 @@ data class SoftwareEngineer(
 ### محمدامین بودلانی | توسعه‌دهنده ارشد اندروید و نرم‌افزار (Full-Stack & Android)
 **همدان، ایران (۲۰ ساله - متولد ۱۳۸۵) | معافیت تحصیلی (دانشجوی نرم‌افزار) | آماده همکاری دورکاری، تمام‌وقت و پروژه‌ای**
 
+<div align="center">
+
+[![دانلود فایل PDF رزومه](https://img.shields.io/badge/PDF_Resume-Download_aminboodlani.pdf-DC2626?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./aminboodlani.pdf)
+[![مشاهده رزومه آنلاین](https://img.shields.io/badge/Web_Resume-Interactive_HTML-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](./resume-fa.html)
+
+<br/>
+
+**[📥 دریافت مستقیم فایل رسمی رزومه (PDF)](./aminboodlani.pdf) • [🌐 نسخه وب و چاپ آنلاین رزومه](./resume-fa.html)**
+
+</div>
+
 #### 🚀 شاخص‌های کلیدی در یک نگاه:
 * **+۱,۰۰۰,۰۰۰ (بیش از ۱ میلیون) نصب فعال** در مارکت‌های رسمی کافه‌بازار و مایکت با پایداری ۹۹.۸٪ Crash-free.
 * **رتبه کشوری** در مسابقات تخصصی برنامه‌نویسی نرم‌افزار و اندروید (۱۴۰۳).
 * **دارنده کارت رسمی نخبگان** از بنیاد ملی نخبگان استان همدان.
 * **رتبه اول استانی** در مسابقات وب و طراحی نرم‌افزار (۱۴۰۳).
 * **۶+ سال سابقه عملیاتی** در برنامه‌نویسی مستقل، توسعه محصول و مدیریت زیرساخت سرور.
+
+#### 💼 سوابق شغلی و تجربیات حرفه‌ای:
+##### توسعه‌دهنده مستقل، موسس استارتاپ و فریلنسر ارشد (۱۳۹۸ – اکنون | بیش از ۶ سال)
+* **جذب بیش از ۱,۰۰۰,۰۰۰ کاربر فعال:** طراحی و انتشار بیش از ۱۰ محصول نرم‌افزاری در مارکت‌های رسمی با ثبت رکورد پایداری **Crash-free بالای ۹۹.۸٪**.
+* **سرویس‌های پرترافیک و بهینه:** طراحی و پیاده‌سازی دانلودر آنلاین ([dl.rubinopro.ir](https://dl.rubinopro.ir)) با پردازش پرسرعت و سبک در سطح وب‌سرویس و پاسخ‌دهی پایدار به هزاران کاربر روزانه.
+* **کانفیگ و هاستینگ سرور (DevOps):** تسلط بر راه‌اندازی و کانفیگ صفر تا صد سرورهای VPS لینوکسی (Ubuntu/Debian) برای هاستینگ، نصب و مدیریت محیط‌های cPanel و WHM، تنظیمات DNS، وب‌سرورهای Nginx/Apache و ایمن‌سازی دامنه‌ها.
+* **توسعه فول‌استک پلتفرم‌ها:** رهبری فنی و پیاده‌سازی صفر تا صد نیازمندی‌ها، مدل‌سازی داده‌ها، APIهای پرسرعت و کلاینت‌های نیتیو اندروید.
+* **یادگیری سریع و تعامل تیمی:** سرعت جذب و یادگیری فوق‌العاده بالا در کار با استک‌ها و ابزارهای جدید، انگیزه و تعهد بالا به کار تیمی، مستندسازی شفاف، تبادل نظر فنی و مشارکت فعال در فرآیندهای توسعه با Git و GitHub.
+
+#### 🎓 تحصیلات دانشگاهی:
+* **دانشجوی کاردانی مهندسی کامپیوتر (گرایش نرم‌افزار)**  
+  دانشگاه ملی مهارت (دانشکده دولتی شهید جباریان همدان) | ۱۴۰۲ – اکنون (سال دوم) | معافیت تحصیلی فعال
 
 #### 🛠️ دسته‌بندی مهارت‌های فنی:
 * **⭐️ تخصص‌های اصلی و عمیق:**
